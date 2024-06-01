@@ -13,3 +13,5 @@ allow citadeld fwk_stats_service:service_manager find;
 allow citadeld hal_power_stats_vendor_service:service_manager find;
 
 set_prop(citadeld, vendor_nos_citadel_version);
+
+domain_auto_trans(init, citadel_updater, dump_gsc)
