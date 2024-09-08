@@ -62,3 +62,5 @@ get_prop(hal_neuralnetworks_darwinn, vendor_hetero_runtime_prop)
 # Allow DMA Buf access.
 allow hal_neuralnetworks_darwinn dmabuf_system_heap_device:chr_file r_file_perms;
 
+allow hal_neuralnetworks_darwinn traced_producer_socket:sock_file { write };
+allow hal_neuralnetworks_darwinn traced:unix_stream_socket connectto;

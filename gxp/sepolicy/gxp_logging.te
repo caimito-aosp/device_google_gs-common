@@ -19,3 +19,6 @@ get_prop(gxp_logging, vendor_gxp_prop)
 
 # Allow gxp tracing service to send packets to Perfetto
 userdebug_or_eng(`perfetto_producer(gxp_logging)')
+
+allow gxp_logging traced_producer_socket:sock_file { write };
+allow gxp_logging traced:unix_stream_socket connectto;
